@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fechar popup manualmente
   popupClose.addEventListener("click", () => {
     popup.classList.add("hidden");
-    window.location.href = "index.html"; // ✅ volta para a página inicial
+    window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/index.html"; // ✅ redireciona absoluto
   });
 
   // Submissão do formulário
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ✅ Redireciona automaticamente após 3 segundos
     setTimeout(() => {
       popup.classList.add("hidden");
-      window.location.href = "index.html";
+      window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/index.html";
     }, 3000);
   });
 });

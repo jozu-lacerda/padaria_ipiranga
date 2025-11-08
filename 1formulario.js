@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("popup");
   const popupClose = document.getElementById("popup-close");
 
-  // Fecha popup manualmente
+  // Fechar popup manualmente
   popupClose.addEventListener("click", () => {
     popup.classList.add("hidden");
-    window.location.href = "@cardapio.html"; // 🔁 redireciona após clicar em "Fechar"
+    window.location.href = "cardapio.html"; // redireciona após fechar
   });
 
   // Submissão do formulário
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const produtoServico = document.getElementById("select").value;
     const avaliacao = document.querySelector("input[name='avaliacao']:checked")?.value;
     const comentarios = document.getElementById("comentarios").value.trim();
-    const recomendaria = document.querySelectorAll(".termos input[type='checkbox']")[0].checked ? "Sim" : "Não";
-    const autoriza = document.querySelectorAll(".termos input[type='checkbox']")[1].checked ? "Sim" : "Não";
+    const recomendaria = document.getElementById("recomendaria").checked ? "Sim" : "Não";
+    const autoriza = document.getElementById("autoriza").checked ? "Sim" : "Não";
 
     if (!avaliacao) {
       alert("⚠️ Selecione uma avaliação antes de enviar.");
@@ -46,13 +46,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mostra pop-up
     popup.classList.remove("hidden");
     formFeedback.reset();
-
-    /* 
-      🔁 OPÇÃO 1: redirecionamento automático após 3 segundos.
-      (descomente as 3 linhas abaixo se quiser automático)
-    */
-    // setTimeout(() => {
-    //   window.location.href = "index.html";
-    // }, 3000);
   });
 });

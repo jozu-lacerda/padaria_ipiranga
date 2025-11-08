@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const numeroLoja = "5511912475226"; // número WhatsApp da loja
+  const numeroLoja = "5511912475226"; 
   const formFeedback = document.getElementById("form-feedback");
   const popup = document.getElementById("popup");
   const popupClose = document.getElementById("popup-close");
@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fechar popup manualmente
   popupClose.addEventListener("click", () => {
     popup.classList.add("hidden");
-    window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/index.html"; // ✅ redireciona absoluto
+    window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/"; // ✅ volta à home real
   });
 
-  // Submissão do formulário
   formFeedback.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -40,20 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const url = `https://wa.me/${numeroLoja}?text=${encodeURIComponent(mensagemFeedback)}`;
 
-    // Abre WhatsApp em nova aba
+    // Abre WhatsApp
     window.open(url, "_blank");
 
-    // Mostra pop-up de agradecimento
+    // Mostra pop-up
     popup.classList.remove("hidden");
 
     // Limpa o formulário
     formFeedback.reset();
 
-    // ✅ Redireciona automaticamente após 3 segundos
+    // Redireciona automático após 3s
     setTimeout(() => {
       popup.classList.add("hidden");
-window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/";
-
+      window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/";
     }, 3000);
   });
 });
+// Código do carrinho de compras (cardapiojavas.js)

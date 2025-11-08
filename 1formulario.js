@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // ✅ Redireciona automaticamente após 3 segundos
     setTimeout(() => {
       popup.classList.add("hidden");
-      window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/index.html";
+window.location.href = "https://jozu-lacerda.github.io/padaria_ipiranga/";
+
     }, 3000);
   });
 });

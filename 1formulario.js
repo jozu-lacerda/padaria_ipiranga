@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fechar popup manualmente
   popupClose.addEventListener("click", () => {
     popup.classList.add("hidden");
-    window.location.href = "cardapio.html"; // redireciona após fechar
+    window.location.href = "index.html"; // ✅ volta para a página inicial
   });
 
   // Submissão do formulário
@@ -43,8 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Abre WhatsApp em nova aba
     window.open(url, "_blank");
 
-    // Mostra pop-up
+    // Mostra pop-up de agradecimento
     popup.classList.remove("hidden");
+
+    // Limpa o formulário
     formFeedback.reset();
+
+    // ✅ Redireciona automaticamente após 3 segundos
+    setTimeout(() => {
+      popup.classList.add("hidden");
+      window.location.href = "index.html";
+    }, 3000);
   });
 });

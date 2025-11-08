@@ -1,92 +1,97 @@
-let carrinho = [];
-let totalCarrinho = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  let carrinho = [];
+  let totalCarrinho = 0;
 
-const container = document.querySelector(".carrinho-container");
-const totalSpan = document.getElementById("totalCarrinho");
+  const container = document.querySelector(".carrinho-container");
+  const totalSpan = document.getElementById("totalCarrinho");
+  const removerTodos = document.getElementById("removerTodos");
+  const enviarPedido = document.getElementById("enviar-pedido");
 
-// Adicionar produto ao carrinho
-document.querySelectorAll(".comprar").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const produto = btn.dataset.produto;
-    const preco = parseFloat(btn.dataset.preco);
+  if (!container || !totalSpan) return;
 
-    const itemExistente = carrinho.find(item => item.produto === produto);
+  // Adicionar produto ao carrinho
+  document.querySelectorAll(".comprar").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const produto = btn.dataset.produto;
+      const preco = parseFloat(btn.dataset.preco);
 
-    if (itemExistente) {
-      itemExistente.quantidade += 1;
-      itemExistente.subtotal = itemExistente.quantidade * preco;
-    } else {
-      carrinho.push({
-        produto: produto,
-        preco: preco,
-        quantidade: 1,
-        subtotal: preco
-      });
-    }
+      const itemExistente = carrinho.find(item => item.produto === produto);
 
-    atualizarCarrinho();
-  });
-});
+      if (itemExistente) {
+        itemExistente.quantidade += 1;
+        itemExistente.subtotal = itemExistente.quantidade * preco;
+      } else {
+        carrinho.push({
+          produto: produto,
+          preco: preco,
+          quantidade: 1,
+          subtotal: preco
+        });
+      }
 
-function atualizarCarrinho() {
-  container.innerHTML = "";
-  totalCarrinho = 0;
-
-  carrinho.forEach(item => {
-    totalCarrinho += item.subtotal;
-
-    const div = document.createElement("div");
-    div.className = "carrinho-item";
-    div.innerHTML = `
-      <h4>${item.produto}</h4>
-      <p>Preço Unitário: R$ ${item.preco.toFixed(2)}</p>
-      <p>Quantidade: ${item.quantidade}</p>
-      <p>Total: R$ ${item.subtotal.toFixed(2)}</p>
-    `;
-    container.appendChild(div);
+      atualizarCarrinho();
+    });
   });
 
-  totalSpan.textContent = totalCarrinho.toFixed(2);
-}
+  function atualizarCarrinho() {
+    container.innerHTML = "";
+    totalCarrinho = 0;
 
-// Limpar carrinho
-document.getElementById("removerTodos").addEventListener("click", () => {
-  carrinho = [];
-  totalCarrinho = 0;
-  container.innerHTML = "";
-  totalSpan.textContent = "0.00";
-});
+    carrinho.forEach(item => {
+      totalCarrinho += item.subtotal;
 
-// Enviar pedido via WhatsApp e abrir Feedback
-document.getElementById("enviar-pedido").addEventListener("click", () => {
-  if (carrinho.length === 0) {
-    alert("Carrinho vazio!");
-    return;
+      const div = document.createElement("div");
+      div.className = "carrinho-item";
+      div.innerHTML = `
+        <h4>${item.produto}</h4>
+        <p>Preço Unitário: R$ ${item.preco.toFixed(2)}</p>
+        <p>Quantidade: ${item.quantidade}</p>
+        <p>Total: R$ ${item.subtotal.toFixed(2)}</p>
+      `;
+      container.appendChild(div);
+    });
+
+    totalSpan.textContent = totalCarrinho.toFixed(2);
   }
 
-  let mensagem = "🛍️ *Novo Pedido - PADOCA*\n\n";
-
-  carrinho.forEach((item, index) => {
-    mensagem += `${index + 1}. ${item.produto} (${item.quantidade}x) - R$ ${item.subtotal.toFixed(2)}\n`;
+  // Limpar carrinho
+  removerTodos?.addEventListener("click", () => {
+    carrinho = [];
+    totalCarrinho = 0;
+    container.innerHTML = "";
+    totalSpan.textContent = "0.00";
   });
 
-  mensagem += `\n💰 *Total Geral:* R$ ${totalCarrinho.toFixed(2)}\n\n`;
-  mensagem += "Por favor, confirme meu pedido 😊";
+  // Enviar pedido via WhatsApp e abrir Feedback
+  enviarPedido?.addEventListener("click", () => {
+    if (carrinho.length === 0) {
+      alert("Carrinho vazio!");
+      return;
+    }
 
-  const numero = "5511912475226";
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    let mensagem = "🛍️ *Novo Pedido - PADOCA*\n\n";
 
-  // Abre o WhatsApp em nova aba
-  window.open(url, "_blank");
+    carrinho.forEach((item, index) => {
+      mensagem += `${index + 1}. ${item.produto} (${item.quantidade}x) - R$ ${item.subtotal.toFixed(2)}\n`;
+    });
 
-  // Após 3 segundos, abre o formulário de feedback em nova aba (_blank)
-  setTimeout(() => {
-    window.open("/1formulario.html", "_blank");
-  }, 3000);
+    mensagem += `\n💰 *Total Geral:* R$ ${totalCarrinho.toFixed(2)}\n\n`;
+    mensagem += "Por favor, confirme meu pedido 😊";
 
-  // Limpa o carrinho visualmente
-  carrinho = [];
-  totalCarrinho = 0;
-  container.innerHTML = "";
-  totalSpan.textContent = "0.00";
+    const numero = "5511912475226";
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    // Abre o WhatsApp em nova aba
+    window.open(url, "_blank");
+
+    // Após 3 segundos, abre o formulário de feedback
+    setTimeout(() => {
+      window.open("1formulario.html", "_blank");
+    }, 3000);
+
+    carrinho = [];
+    totalCarrinho = 0;
+    container.innerHTML = "";
+    totalSpan.textContent = "0.00";
+  });
 });

@@ -1,0 +1,256 @@
+/* Corpo da página centralizado */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cfe1ee; /* azul bebê suave */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #1d4e89; /* azul escuro */
+  width: 100%;
+  padding: 40px 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+nav a:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;
+  background-color: #eaf4fc; /* leve fundo azul claro */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+h1.a10 {
+  color: #1d4e89;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h1.a11 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Formulário de cadastro */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  text-align: center
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+}
+
+form input:focus {
+  border-color: #1d4e89;
+  box-shadow: 0 0 5px rgba(29,78,137,0.5);
+  outline: none;
+}
+
+/* Botão do formulário */
+form button {
+  background-color: #1d4e89;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #3b7bdc;
+  transform: scale(1.05);
+}
+
+/* Footer principal */
+/* Footer principal */
+footer {
+  background-color: #1d4e89;
+  color: white; /* todo o texto do footer será branco */
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; /* garante fonte consistente */
+}
+
+footer * {
+  color: white; /* força que todo elemento dentro do footer seja branco */
+}
+
+footer .footer-contato,
+footer .footer-newsletter,
+footer .footer-links {
+  flex: 1 1 250px;
+  text-align: left;
+}
+
+/* Formulário da newsletter */
+footer .footer-newsletter form input,
+footer .footer-newsletter form button {
+  display: block;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 12px 10px; /* mais espaço interno para o texto */
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+footer .footer-newsletter form button {
+  background-color: #f9a826;
+  color: #1d4e89;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+footer .footer-newsletter form button:hover {
+  transform: scale(1.05);
+}
+
+/* Links do footer */
+footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-links ul li {
+  margin-bottom: 8px;
+}
+
+footer .footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .footer-links ul li a:hover {
+  color: #f9a826;
+}
+
+/* Direitos reservados */
+footer .footer-direitos {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .footer-contato,
+  footer .footer-newsletter,
+  footer .footer-links {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  footer .footer-newsletter form input,
+  footer .footer-newsletter form button {
+    width: 100%;
+  }
+}
+
+.whatsapp-btn {
+  position: fixed;
+  top: 200px;             /* distância do topo */
+  right: 40px;           /* distância da direita */
+  width: 80px;
+  height: 80px;
+  background-color: #25D366;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 95px;
+  height: 85px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow:  6px 15px rgba(0,0,0,0.4);
+}
+
+.botao-menu{
+  color: white;
+  background-color: #1d4e89;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.botao-menu:hover{
+  background-color: #3b7bdc;
+  cursor: pointer;
+}

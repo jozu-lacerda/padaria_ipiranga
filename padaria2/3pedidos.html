@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/formulario2/3pedidos.css" />
+  <title>PADOCA - PEDIDOS</title>
+</head>
+<body>
+  <header>
+  <nav>
+<ul>
+  <li><button class="botao-menu" onclick="window.open('1index.html','_blank')">Página Principal</button></li>
+  <li><button class="botao-menu" onclick="window.open('2cadastro.html','_blank')">Cadastro</button></li>
+  <li><button class="botao-menu" onclick="window.open('3pedidos.html','_blank')">Pedidos</button></li>
+  <li><button class="botao-menu" onclick="window.open('5feedback.html','_blank')">Feedback</button></li>
+  <li><button class="botao-menu" onclick="window.open('contato.html','_blank')">Contato</button></li>
+</ul>
+
+  </nav>
+  </header>
+
+<button class="whatsapp-btn" onclick="window.open('https://www.whatsapp.com/?lang=pt', '_blank')">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp Logo">
+</button>
+
+    <h1>Seção 2 - Detalhes do Pedido</h1>
+    <p>Escolha o tipo de produto, sabor, tamanho e data de entrega.</p>
+
+
+<form action="4pedidosdetalhes.html" method="get" target="_blank">
+  <div class="caixa-produto">
+    <h2>Produtos</h2>
+
+    <label for="bolo_quantidade">Bolo:</label>
+    <select id="bolo_quantidade" name="bolo_quantidade" required>
+      <option value="">Quantidade</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <label for="bolo_sabor">Sabor / Recheio:</label>
+    <input type="text" id="bolo_sabor" name="bolo_sabor" placeholder="Ex: Chocolate, Morango"><br/><br/>
+
+    <label for="torta_quantidade">Torta:</label>
+    <select id="torta_quantidade" name="torta_quantidade" required>
+      <option value="">Quantidade</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <label for="torta_sabor">Sabor / Recheio:</label>
+    <input type="text" id="torta_sabor" name="torta_sabor" placeholder="Ex: Limão, Doce de leite"><br/><br/>
+
+    <label for="salgados_quantidade">Salgados:</label>
+    <select id="salgados_quantidade" name="salgados_quantidade" required>
+      <option value="">Quantidade</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <label for="salgados_sabor">Sabor / Recheio:</label>
+    <input type="text" id="salgados_sabor" name="salgados_sabor" placeholder="Ex: Queijo, Presunto"><br/><br/>
+  </div>
+
+  <button type="submit">Avançar para Informações Adicionais</button>
+</form>
+
+
+
+  </main>
+</body>
+<br><br>
+<footer>
+  <div class="footer-contato">
+    <p>Rua São Caetano, 123456 - Centro - São Paulo - SP</p>
+    <p>(11) 2020-2025</p>
+    <p></p>
+    <p>Horário de funcionamento: todos os dias das 6h às 22h</p>
+  </div>
+  <div class="footer-newsletter">
+    <h3>Cadastre-se e receba nossa newsletter</h3>
+    <form onsubmit="return true;"> <!-- Apenas recarrega a página -->
+      <label for="nome">Nome *</label><br>
+      <input type="text" id="nome" name="nome" required><br>
+
+      <label for="email">E-mail *</label><br>
+      <input type="email" id="email" name="email" required><br>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+  </div>
+
+  <div class="footer-links">
+    <h3>Conheça o Ipiranga</h3>
+    <ul>
+      <li><a href="/formulario2/1index.html">Produtos</a></li>
+      <li><a href="/formulario2/1index.html">Fotos e Vídeos</a></li>
+      <li><a href="/formulario2/1index.html">Dicas e Curiosidades</a></li>
+      <li><a href="/formulario2/1index.html">Notícias</a></li>
+      <li><a href="/formulario2/1index.html">Fale Conosco</a></li>
+    </ul>
+  </div> <br><br><br>
+  <div class="footer-direitos">
+    <p>Todos os direitos reservados. Proibida a reprodução do conteúdo total ou em parte, sem autorização.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+</html>

@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f9d976, #50a8e7);
+    color: #333;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #3f8efc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fffdf8;
+    border: 2px solid #3f8efc;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #3f8efc;
+    border-bottom: 2px solid #3f8efc;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #3f8efc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: #fffaf0;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3f8efc;
+    outline: none;
+    box-shadow: 0 0 8px rgba(63,142,252,0.4);
+    background-color: #f0f8ff;
+}
+
+input[type="radio"] {
+    accent-color: #3f8efc;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #3f8efc;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #2b6edc;
+    transform: scale(1.05);
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+br {
+    display: none;
+}
+
+form > * + * {
+    margin-top: 10px;
+}
+
+.botao-menu:hover {
+    background-color: #3b7bdc;
+    cursor: pointer;
+}
+.whatsapp-btn {
+  position: fixed;
+  top: 20px;        /* distância do topo */
+  right: 20px;      /* distância da direita */
+  width: 60px;      /* tamanho do botão */
+  height: 60px;
+  background-color: #25D366;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 35px;      /* ajuste proporcional ao botão */
+  height: 35px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 15px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,380 @@
+/* Corpo da página centralizado */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cfe1ee;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #1d4e89;
+  width: 100%;
+  padding: 40px 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+nav a:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 1200px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+h1 {
+  color: #1d4e89;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+a.botao-principal {
+  background-color: #1d4e89;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+a.botao-principal:hover {
+  background-color: #3b7bdc;
+  transform: scale(1.05);
+}
+
+/* Galerias */
+.galeria, .galeria2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding: 40px 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+
+}
+
+.galeria img, .galeria2 img {
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover, .galeria2 img:hover {
+  transform: scale(1.10);
+  cursor: pointer;
+}
+
+/* Footer principal */
+/* Footer principal */
+footer {
+  background-color: #1d4e89;
+  color: white; /* todo o texto do footer será branco */
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; /* garante fonte consistente */
+}
+
+footer * {
+  color: white; /* força que todo elemento dentro do footer seja branco */
+}
+
+footer .footer-contato,
+footer .footer-newsletter,
+footer .footer-links {
+  flex: 1 1 250px;
+  text-align: left;
+}
+
+/* Formulário da newsletter */
+footer .footer-newsletter form input,
+footer .footer-newsletter form button {
+  display: block;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 12px 10px; /* mais espaço interno para o texto */
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+footer .footer-newsletter form button {
+  background-color: #f9a826;
+  color: #1d4e89;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+footer .footer-newsletter form button:hover {
+  transform: scale(1.05);
+}
+
+/* Links do footer */
+footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-links ul li {
+  margin-bottom: 8px;
+}
+
+footer .footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .footer-links ul li a:hover {
+  color: #f9a826;
+}
+
+/* Direitos reservados */
+footer .footer-direitos {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+/*imagens */
+
+  .tabela-produtos {
+    width: 80%;
+  }
+
+  .produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a0d8f2;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+
+  .produto:hover {
+    transform: translateY(-2px);
+  }
+
+  .info-produto {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* espaço entre imagem e texto */
+  }
+
+  .info-produto img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .nome-produto {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .preco {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+
+  .botoes button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .adicionar {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .adicionar:hover {
+    background-color: #45a049;
+  }
+
+  .comprar {
+    background-color: #2196F3;
+    color: white;
+  }
+  .comprar:hover {
+    background-color: #0b7dda;
+  }
+
+  
+/* Responsividade */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .footer-contato,
+  footer .footer-newsletter,
+  footer .footer-links {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  footer .footer-newsletter form input,
+  footer .footer-newsletter form button {
+    width: 100%;
+  }
+}
+
+.whatsapp-btn {
+  position: fixed;
+  top: 200px;             /* distância do topo */
+  right: 40px;           /* distância da direita */
+  width: 80px;
+  height: 80px;
+  background-color: #25D366;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 95px;
+  height: 85px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow:  6px 15px rgba(0,0,0,0.4);
+}
+
+.botao-menu{
+  color: white;
+  background-color: #1d4e89;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.botao-menu:hover{
+  background-color: #3b7bdc;
+  cursor: pointer;
+}
+
+.galeria-produtos{
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+/* Contêiner dos itens */
+.itens {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente (se tiver altura definida) */
+  gap: 20px;               /* Espaço entre os itens */
+  flex-wrap: wrap;         /* Quebra linha se necessário */
+  margin-top: 20px;
+}
+
+/* Cada item individual */
+.item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  text-align: center;
+  width: 200px;
+  transition: 0.3s ease;
+  
+}
+
+.item:hover {
+  transform: scale(1.1);
+  background-color: #80b1ec;
+  cursor: pointer;
+}
+
+/* Depoimentos */
+.depoimento {
+  background-color: #fdf2e0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Cards de depoimento */
+.cards {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  text-align: center;
+  width: 200px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background-color: #80b1ec;
+  cursor: pointer;
+}
